@@ -6,7 +6,9 @@ namespace CsvConvert_inCamp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ConvertCsv c = new ConvertCsv("acme_worksheet.csv");
+            c.ReadingCsv();
+            c.WritingToCsv();
         }
     }
 }

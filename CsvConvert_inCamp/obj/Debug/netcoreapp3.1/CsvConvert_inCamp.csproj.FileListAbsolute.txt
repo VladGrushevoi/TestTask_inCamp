@@ -2,3 +2,14 @@ D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp
 D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.csprojAssemblyReference.cache
 D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.AssemblyInfoInputs.cache
 D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.AssemblyInfo.cs
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.deps.json
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.runtimeconfig.json
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.runtimeconfig.dev.json
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.dll
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.pdb
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvHelper.dll
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.csproj.CoreCompileInputs.cache
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.csproj.CopyComplete
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.dll
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.pdb
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.genruntimeconfig.cache

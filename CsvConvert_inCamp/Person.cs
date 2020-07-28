@@ -6,5 +6,10 @@ namespace CsvConvert_inCamp
 {
     class Person
     {
+        public string Name { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string WorkHours { get; set; }
     }
 }
