@@ -13,6 +13,7 @@ namespace CsvConvert_inCamp
         string NameCsv = null;
         List<Person> personsData = new List<Person>();
 
+        SortedSet<string> uniquePerson = new SortedSet<string>();
         SortedSet<DateTime> dates = new SortedSet<DateTime>();
 
         public ConvertCsv(string nameCsv)
@@ -29,7 +30,7 @@ namespace CsvConvert_inCamp
                 csv.Configuration.RegisterClassMap<PersonMap>();
                 personsData = records.OrderBy(n => n.Name).ToList();
             }
-            GetDate();
+            GetUniqueData();
         }
 
         public void WritingToCsv()
@@ -38,6 +39,7 @@ namespace CsvConvert_inCamp
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 WriteHeader(csv);
+                WritePerson(csv);
             }
         }
 
@@ -49,11 +51,61 @@ namespace CsvConvert_inCamp
             {
                 csv.WriteField(d.ToString("yyyy-MM-dd"));
             }
+            csv.NextRecord();
         }
 
-        public void GetDate()
+        public void WritePerson(CsvWriter csv)
         {
-            personsData.ForEach(p => dates.Add(p.Date));
+            List<Person> tempPerson = new List<Person>();
+
+            foreach (var up in uniquePerson)
+            {
+                foreach (var p in personsData)
+                {
+                    if (up == p.Name)
+                    {
+                        tempPerson.Add(p);
+                    }
+                }
+                csv.WriteField(tempPerson[0].Name);
+                FormHours(tempPerson, csv);
+                tempPerson.Clear();
+                csv.NextRecord();
+            }
+        }
+
+        public void FormHours(List<Person> per, CsvWriter csv)
+        {
+            bool flag = true;
+            foreach (var d in dates)
+            {
+                foreach (var p in per)
+                {
+                    if (d == p.Date)
+                    {
+                        csv.WriteField(p.WorkHours);
+                        flag = false;
+                        break;
+                    }
+                    else
+                    {
+                        flag = true;
+                    }
+                }
+                if (flag)
+                {
+                    csv.WriteField("0");
+                }
+            }
+        }
+
+        public void GetUniqueData()
+        {
+            foreach (var p in personsData)
+            {
+                dates.Add(p.Date);
+                uniquePerson.Add(p.Name);
+            }
         }
 
     }
