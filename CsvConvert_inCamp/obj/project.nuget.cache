@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zjXVmyABRMVd1CEYXlmP9B/J+6bpjbrZ+ycicGvI94jBdu81iohvICdTRNr9xSHV8ehvNtLGiwq+j8IMbNLwRg==",
+  "dgSpecHash": "LdsXAr749NKMQ0cDSsr6dAA3KQc1wDuKrNqkJ8dnzflEObK6jYgQ0ZrrsHrhdzErt3cCpxYfa/3EOhTn5BW1xQ==",
   "success": true,
   "projectFilePath": "D:\\CsvConvert_inCamp\\CsvConvert_inCamp\\CsvConvert_inCamp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vladg\\.nuget\\packages\\csvhelper\\15.0.5\\csvhelper.15.0.5.nupkg.sha512",
+    "C:\\Users\\vladg\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

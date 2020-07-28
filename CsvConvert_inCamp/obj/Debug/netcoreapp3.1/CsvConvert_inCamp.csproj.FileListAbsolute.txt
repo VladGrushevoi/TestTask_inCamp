@@ -1,0 +1,4 @@
+D:\CsvConvert_inCamp\CsvConvert_inCamp\bin\Debug\netcoreapp3.1\CsvConvert_inCamp.exe
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.csprojAssemblyReference.cache
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.AssemblyInfoInputs.cache
+D:\CsvConvert_inCamp\CsvConvert_inCamp\obj\Debug\netcoreapp3.1\CsvConvert_inCamp.AssemblyInfo.cs
