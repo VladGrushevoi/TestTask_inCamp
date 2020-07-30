@@ -15,6 +15,7 @@ namespace CsvConvert_inCamp
 
         SortedSet<string> uniquePerson = new SortedSet<string>();
         SortedSet<DateTime> dates = new SortedSet<DateTime>();
+        List<Person> tempPerson = new List<Person>();
 
         public ConvertCsv(string nameCsv)
         {
@@ -30,7 +31,6 @@ namespace CsvConvert_inCamp
                 csv.Configuration.RegisterClassMap<PersonMap>();
                 personsData = records.OrderBy(n => n.Name).ToList();
             }
-            GetUniqueData();
         }
 
         public void WritingToCsv()
@@ -38,6 +38,7 @@ namespace CsvConvert_inCamp
             using (var writer = new StreamWriter("result.csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
+                GetUniqueDate();
                 WriteHeader(csv);
                 WritePerson(csv);
             }
@@ -56,21 +57,17 @@ namespace CsvConvert_inCamp
 
         public void WritePerson(CsvWriter csv)
         {
-            List<Person> tempPerson = new List<Person>();
-
-            foreach (var up in uniquePerson)
+            foreach (var p in personsData)
             {
-                foreach (var p in personsData)
+                if (!uniquePerson.Contains(p.Name))
                 {
-                    if (up == p.Name)
-                    {
-                        tempPerson.Add(p);
-                    }
+                    uniquePerson.Add(p.Name);
+                    tempPerson = personsData.FindAll(tp => tp.Name.Equals(p.Name)); 
+                    csv.WriteField(tempPerson[0].Name);
+                    FormHours(tempPerson, csv);
+                    tempPerson.Clear();
+                    csv.NextRecord();
                 }
-                csv.WriteField(tempPerson[0].Name);
-                FormHours(tempPerson, csv);
-                tempPerson.Clear();
-                csv.NextRecord();
             }
         }
 
@@ -99,13 +96,9 @@ namespace CsvConvert_inCamp
             }
         }
 
-        public void GetUniqueData()
+        public void GetUniqueDate()
         {
-            foreach (var p in personsData)
-            {
-                dates.Add(p.Date);
-                uniquePerson.Add(p.Name);
-            }
+            personsData.ForEach(p => dates.Add(p.Date));
         }
 
     }
